@@ -109,6 +109,15 @@ impl Timing for Ws2811Timing {
     const TIME_1_LOW: u16 = Ws2811LowSpeedTiming::TIME_1_LOW / 2;
 }
 
+/// Timing for the WS2815 driver ICs.
+pub enum Ws2815Timing {}
+impl Timing for Ws2815Timing {
+    const TIME_0_HIGH: u16 = 300;
+    const TIME_0_LOW: u16 = 1090;
+    const TIME_1_HIGH: u16 = 1090;
+    const TIME_1_LOW: u16 = 320;
+}
+
 /// All types of errors that can happen during the conversion and transmission
 /// of LED commands.
 #[derive(Debug, Clone, Copy)]
